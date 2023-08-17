@@ -20,11 +20,6 @@ npm create vite@latest jobstrack -- --template react
 
 - in src remove
 - App.css
-- App.test.js
-- logo.svg
-- reportWebVitals.js
-- setupTests.js
-- fix App.js and index.js
 
 #### 2) Title and Favicon
 
@@ -566,14 +561,12 @@ npm install axios
 - Root URL
 - https://jobify-prod.herokuapp.com/api/v1/toolkit
 
-- NODE COURSE
-
 ###### Register USER
 
 - https://jobify-prod.herokuapp.com/api/v1/toolkit/auth/register
 
 - POST /auth/register
-- {name:'john',email:'john@gmail.com',password:'secret'}
+- {name:'sahil',email:'sahil@gmail.com',password:'secret'}
 - sends back the user object with token
 
 ###### Register USER - TESTING()
