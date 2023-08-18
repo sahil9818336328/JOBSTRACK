@@ -5,6 +5,7 @@ import { toast } from 'react-toastify'
 import {
   clearValues,
   createJob,
+  editJob,
   handleChange,
 } from '../../features/job/jobSlice'
 import { useEffect } from 'react'
@@ -35,6 +36,16 @@ const AddJobs = () => {
       return
     }
 
+    if (isEditing) {
+      dispatch(
+        editJob({
+          jobId: editJobId,
+          job: { position, company, jobLocation, jobType, status },
+        })
+      )
+      return
+    }
+
     dispatch(createJob({ position, company, status, jobLocation, jobType }))
   }
   const handleJobInput = (e) => {
@@ -44,7 +55,9 @@ const AddJobs = () => {
   }
 
   useEffect(() => {
-    dispatch(handleChange({ name: 'jobLocation', value: user.location }))
+    if (!isEditing) {
+      dispatch(handleChange({ name: 'jobLocation', value: user.location }))
+    }
   }, [])
   return (
     <Wrapper>
