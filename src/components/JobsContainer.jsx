@@ -5,14 +5,25 @@ import Loading from './Loading'
 import { useSelector, useDispatch } from 'react-redux'
 import { getAllJobs } from '../features/allJobs/allJobsSlice'
 import { SearchContainer } from '.'
+import PageBtnContainer from './PageBtnContainer'
 
 const JobsContainer = () => {
-  const { jobs, isLoading } = useSelector((store) => store.allJobs)
+  const {
+    jobs,
+    isLoading,
+    page,
+    totalJobs,
+    numOfPages,
+    search,
+    searchStatus,
+    searchType,
+    sort,
+  } = useSelector((store) => store.allJobs)
   const dispatch = useDispatch()
 
   useEffect(() => {
     dispatch(getAllJobs())
-  }, [])
+  }, [page, search, searchStatus, searchType, sort])
 
   if (isLoading) {
     return <Loading center />
@@ -29,12 +40,15 @@ const JobsContainer = () => {
   return (
     <Wrapper>
       <SearchContainer />
-      <h5>jobs info</h5>
+      <h5>
+        {totalJobs} job{jobs.length > 1 && 's'} found
+      </h5>
       <div className='jobs'>
         {jobs.map((job) => {
           return <Job key={job._id} {...job} />
         })}
       </div>
+      {numOfPages > 1 && <PageBtnContainer />}
     </Wrapper>
   )
 }
