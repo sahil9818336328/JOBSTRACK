@@ -370,8 +370,6 @@ return (
 
 #### 20) Handle Change and Empty Values
 
-[Dynamic Object Keys](https://youtu.be/_qxCYtWm0tw)
-
 Register.js
 
 ```js
@@ -569,22 +567,16 @@ npm install axios
 - {name:'sahil',email:'sahil@gmail.com',password:'secret'}
 - sends back the user object with token
 
-###### Register USER - TESTING()
-
-- POST /auth/testingRegister
-- {name:'john',email:'john@gmail.com',password:'secret'}
-- sends back the user object with token
-
 ###### Login USER
 
 - POST /auth/login
-- {email:'john@gmail.com',password:'secret'}
+- {email:'sahil@gmail.com',password:'secret'}
 - sends back the user object with token
 
 ###### Update USER
 
 - PATCH /auth/updateUser
-- { email:'john@gmail.com', name:'john', lastName:'smith', location:'my location' }
+- { email:'sahil@gmail.com', name:'sahil', lastName:'khatri', location:'my location' }
 - sends back the user object with token
 
 #### 26) Custom Axios Instance
@@ -1226,10 +1218,6 @@ return (
   </div>
 )
 ```
-
-#### REACT ROUTER UPDATE !!!
-
-- [Stack Overflow](https://stackoverflow.com/questions/70644361/react-router-dom-v6-shows-active-for-index-as-well-as-other-subroutes)
 
 ```js
 <NavLink
@@ -2103,8 +2091,6 @@ const JobsContainer = () => {
 export default JobsContainer
 ```
 
-[CSS Only Loading Spinner](https://youtu.be/DqqZEpctZ8w)
-
 Loading.js
 
 ```js
@@ -2836,20 +2822,6 @@ export default ChartsContainer
 npm install recharts
 ```
 
-- For now does not work with React 18
-
-```sh
-npm install react@17 react-dom@17
-```
-
-```sh
-npm install recharts
-```
-
-```sh
-npm install react@18 react-dom@18
-```
-
 #### 80) AreaChart
 
 AreaChart.js
@@ -3062,8 +3034,6 @@ return (
 ```
 
 #### 85) PageBtnContainer Structure
-
-[JS Nuggets - Array.from()](https://youtu.be/zg1Bv4xubwo)
 
 ```js
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from 'react-icons/hi'
@@ -3503,7 +3473,6 @@ userSlice.js
 
 #### Switch To Local Search
 
-- remove isLoading from handleSearch
 - import useState and useMemo from react
 - setup localSearch state value
 - replace search input functionality so it updates localSearch
