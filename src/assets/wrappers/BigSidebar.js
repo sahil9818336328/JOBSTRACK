@@ -25,6 +25,10 @@ const Wrapper = styled.aside`
       display: flex;
       align-items: center;
       padding-left: 2.5rem;
+
+      .s-brand {
+        width: 60px;
+      }
     }
     .nav-links {
       padding-top: 2rem;

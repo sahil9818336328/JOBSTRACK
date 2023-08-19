@@ -8,6 +8,18 @@ const Wrapper = styled.main`
     height: var(--nav-height);
     display: flex;
     align-items: center;
+    gap: 0.5rem;
+
+    .logo {
+      width: 60px;
+    }
+
+    .brand {
+      font-weight: 600;
+      color: #655def;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
   }
   .page {
     min-height: calc(100vh - var(--nav-height));

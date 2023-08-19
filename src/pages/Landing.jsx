@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import main from '../assets/images/main.svg'
+import main from '../assets/images/home.svg'
 import Wrapper from '../assets/wrappers/LandingPage'
 import { Logo } from '../components'
 
@@ -8,6 +8,7 @@ const Landing = () => {
     <Wrapper>
       <nav>
         <Logo />
+        <span className='brand'>JOBSTRACK</span>
       </nav>
       <div className='container page'>
         <div className='info'>

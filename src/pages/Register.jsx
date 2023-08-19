@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Logo } from '../components'
+// import { Logo } from '../components'
+import logo from '../assets/images/brand1.png'
 import Wrapper from '../assets/wrappers/RegisterPage'
 import FormRow from '../components/FormRow'
 import { toast } from 'react-toastify'
@@ -57,7 +58,7 @@ const Register = () => {
   return (
     <Wrapper className='full-page'>
       <form className='form' onSubmit={onSubmit}>
-        <Logo />
+        <img src={logo} alt='logo' className='r-brand' />
         <h3>{values.isMember ? 'Login' : 'Register'}</h3>
 
         {!values.isMember && (

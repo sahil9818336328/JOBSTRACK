@@ -1,5 +1,6 @@
 import NavLinks from './NavLinks'
-import Logo from '../components/Logo'
+// import Logo from '../components/Logo'
+import logo from '../assets/images/brand1.png'
 import Wrapper from '../assets/wrappers/BigSidebar'
 import { useSelector } from 'react-redux'
 
@@ -14,7 +15,7 @@ const BigSidebar = () => {
       >
         <div className='content'>
           <header>
-            <Logo />
+            <img src={logo} alt='logo' className='s-brand' />
           </header>
           <NavLinks />
         </div>

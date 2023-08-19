@@ -11,6 +11,12 @@ const Wrapper = styled.section`
   .form {
     max-width: 400px;
     border-top: 5px solid var(--primary-500);
+
+    .r-brand {
+      width: 60px;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   h3 {
